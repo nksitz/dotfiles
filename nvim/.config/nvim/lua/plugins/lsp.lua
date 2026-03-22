@@ -21,6 +21,8 @@ return {
 			-- Shell
 			vim.lsp.enable("bashls")
 
+			-- Toml
+			vim.lsp.enable("taplo")
 			-- -- Python
 			-- require("lspconfig").pyright.setup({})
 			-- require("lspconfig").ruff.setup({})
@@ -40,6 +42,13 @@ return {
 		"mrcjkb/rustaceanvim",
 		version = "^8", -- Recommended
 		lazy = false, -- This plugin is already lazy
+	},
+	{
+		"saecki/crates.nvim",
+		tag = "stable",
+		config = function()
+			require("crates").setup()
+		end,
 	},
 }
 

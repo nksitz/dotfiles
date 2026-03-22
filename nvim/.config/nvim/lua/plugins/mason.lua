@@ -19,6 +19,7 @@ return {
 					-- "ruff",
 					-- "ts_ls",
 					-- "tailwindcss",
+					"taplo",
 				},
 			})
 			require("mason-tool-installer").setup({
@@ -31,4 +32,3 @@ return {
 		end,
 	},
 }
-
