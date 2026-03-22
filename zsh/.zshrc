@@ -19,3 +19,4 @@ alias nv='nvim'
 # Prompt
 eval "$(starship init zsh)"
 fastfetch
+export PATH="$HOME/.local/bin:$PATH"
