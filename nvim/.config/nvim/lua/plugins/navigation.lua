@@ -31,7 +31,6 @@ return {
 			end)
 		end,
 	},
-
 	{
 		"stevearc/oil.nvim",
 		opts = {
@@ -45,5 +44,16 @@ return {
 		keys = {
 			{ "-", "<CMD>Oil<CR>", desc = "Open parent directory" },
 		},
+	},
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons",
+		config = function()
+			require("bufferline").setup({})
+			vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
+			vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
+			vim.keymap.set("n", "<leader>bd", "<Cmd>bd<CR>", { desc = "Close current buffer" })
+		end,
 	},
 }
