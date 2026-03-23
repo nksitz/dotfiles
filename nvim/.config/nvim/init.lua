@@ -70,6 +70,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 require("config.lazy")
+require("config.mappings")
 
 -- -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
