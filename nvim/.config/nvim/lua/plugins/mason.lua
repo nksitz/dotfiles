@@ -16,17 +16,22 @@ return {
 					"lua_ls",
 					-- "pyright",
 					-- "basedpyright",
-					-- "ruff",
+					"ty",
+					"ruff",
 					-- "ts_ls",
 					-- "tailwindcss",
 					"taplo",
+					"yamlls",
 				},
 			})
 			require("mason-tool-installer").setup({
 				ensure_installed = {
 					-- "mypy",
+					"prettier",
+					"prettierd",
 					"shellcheck",
 					"stylua",
+					"yamllint",
 				},
 			})
 		end,

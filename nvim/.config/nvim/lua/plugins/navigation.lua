@@ -50,7 +50,15 @@ return {
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
 		config = function()
-			require("bufferline").setup({})
+			require("bufferline").setup({
+				options = {
+					diagnostics = "nvim_lsp",
+					diagnostics_indicator = function(count, level)
+						local icon = level:match("error") and " " or " "
+						return " " .. icon .. count
+					end,
+				},
+			})
 			vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
 			vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
 			vim.keymap.set("n", "<leader>bd", "<Cmd>bd<CR>", { desc = "Close current buffer" })
@@ -90,6 +98,11 @@ return {
 				"<leader>xQ",
 				"<cmd>Trouble qflist toggle<cr>",
 				desc = "Quickfix List (Trouble)",
+			},
+			{
+				"<leader>xd",
+				"<cmd>Trouble todo toggle<cr>",
+				desc = "Todo (Trouble)",
 			},
 		},
 	},

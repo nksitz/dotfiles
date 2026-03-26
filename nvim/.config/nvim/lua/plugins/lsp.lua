@@ -15,6 +15,8 @@ return {
 			},
 		},
 		config = function()
+			vim.lsp.inlay_hint.enable(true)
+
 			-- Lua
 			vim.lsp.enable("lua_ls")
 
@@ -23,10 +25,11 @@ return {
 
 			-- Toml
 			vim.lsp.enable("taplo")
+
 			-- -- Python
-			-- require("lspconfig").pyright.setup({})
-			-- require("lspconfig").ruff.setup({})
-			--
+			vim.lsp.enable("ty")
+			vim.lsp.enable("ruff")
+
 			-- -- Javascript / Typescript
 			-- require("lspconfig").ts_ls.setup({})
 			-- require("lspconfig").tailwindcss.setup({})
@@ -53,6 +56,9 @@ return {
 							check = {
 								command = "clippy",
 								features = "all",
+							},
+							rustfmt = {
+								extraArgs = { "+nightly" },
 							},
 						},
 					},
