@@ -26,7 +26,7 @@ $time\
 [ ](fg:purple)\
 $line_break$character"""
 
-palette = 'catppuccin_mocha'
+palette = 'monokai_ristretto'
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
@@ -67,6 +67,34 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
+
+[palettes.monokai_ristretto]
+rosewater = "#fd6883"
+flamingo = "#fd6883"
+pink = "#fd6883"
+orange = "#f38d70"
+red = "#fd6883"
+maroon = "#fd6883"
+peach = "#f38d70"
+yellow = "#f9cc6c"
+green = "#adda78"
+teal = "#85dacc"
+sky = "#85dacc"
+sapphire = "#85dacc"
+blue = "#a8a9eb"
+lavender = "#a8a9eb"
+text = "#fff1f3"
+subtext1 = "#c3b7b8"
+subtext0 = "#948a8b"
+overlay2 = "#72696a"
+overlay1 = "#5b5353"
+overlay0 = "#4a4344"
+surface2 = "#403838"
+surface1 = "#352f2f"
+surface0 = "#2c2525"
+base = "#2c2525"
+mantle = "#211c1c"
+crust = "#191515"
 
 [os]
 disabled = false
