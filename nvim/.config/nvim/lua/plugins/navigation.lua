@@ -1,7 +1,7 @@
 return {
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.8",
+		tag = "v0.2.1",
 		dependencies = { "nvim-lua/plenary.nvim", { "nvim-telescope/telescope-fzf-native.nvim", build = "make" } },
 		config = function()
 			require("telescope").setup({
@@ -37,12 +37,25 @@ return {
 			view_options = {
 				show_hidden = true,
 			},
+			keymaps = {
+				["<Esc>"] = { "actions.close", mode = "n" },
+			},
+			float = {
+				padding = 4,
+				max_width = 0.8,
+				max_height = 0.8,
+				border = "rounded",
+				win_options = {
+					winblend = 0,
+				},
+				preview_split = "auto",
+			},
 		},
 		dependencies = {
 			{ "echasnovski/mini.icons", opts = {} },
 		},
 		keys = {
-			{ "-", "<CMD>Oil<CR>", desc = "Open parent directory" },
+			{ "-", "<CMD>Oil --float<CR>", desc = "Open parent directory" },
 		},
 	},
 	{

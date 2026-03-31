@@ -26,7 +26,7 @@ $time\
 [ ](fg:purple)\
 $line_break$character"""
 
-palette = 'monokai_ristretto'
+palette = 'tokyo_night'
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
@@ -95,6 +95,34 @@ surface0 = "#2c2525"
 base = "#2c2525"
 mantle = "#211c1c"
 crust = "#191515"
+
+[palettes.tokyo_night]
+rosewater = "#f7768e"
+flamingo = "#f7768e"
+pink = "#f7768e"
+orange = "#ff9e64"
+red = "#f7768e"
+maroon = "#db4b4b"
+peach = "#ff9e64"
+yellow = "#e0af68"
+green = "#9ece6a"
+teal = "#73daca"
+sky = "#7dcfff"
+sapphire = "#7aa2f7"
+blue = "#7aa2f7"
+lavender = "#bb9af7"
+text = "#c0caf5"
+subtext1 = "#a9b1d6"
+subtext0 = "#9aa5ce"
+overlay2 = "#565f89"
+overlay1 = "#414868"
+overlay0 = "#3b4261"
+surface2 = "#343b58"
+surface1 = "#292e42"
+surface0 = "#1f2335"
+base = "#1a1b26"
+mantle = "#16161e"
+crust = "#13131a"
 
 [os]
 disabled = false

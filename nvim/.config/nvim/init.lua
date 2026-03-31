@@ -1,3 +1,4 @@
+vim.opt.runtimepath:append("~/.local/share/nvim/site")
 -- Globals
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "

@@ -1,7 +1,7 @@
 return {
 	{
 		"folke/tokyonight.nvim",
-		enabled = false,
+		enabled = true,
 		priority = 1000,
 		config = function()
 			vim.cmd.colorscheme("tokyonight")
@@ -9,6 +9,7 @@ return {
 	},
 	{
 		"gthelding/monokai-pro.nvim",
+		enabled = false,
 		config = function()
 			require("monokai-pro").setup({
 				filter = "ristretto",
