@@ -30,9 +30,10 @@ return {
 			vim.lsp.enable("ty")
 			vim.lsp.enable("ruff")
 
-			-- -- Javascript / Typescript
-			-- require("lspconfig").ts_ls.setup({})
-			-- require("lspconfig").tailwindcss.setup({})
+			-- Javascript / Typescript
+			vim.lsp.enable("astro")
+			vim.lsp.enable("ts_ls")
+			vim.lsp.enable("tailwindcss")
 			--
 			-- -- C#
 			-- require("lspconfig").csharp_ls.setup({})

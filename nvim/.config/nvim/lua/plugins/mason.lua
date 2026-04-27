@@ -18,8 +18,11 @@ return {
 					-- "basedpyright",
 					"ty",
 					"ruff",
-					-- "ts_ls",
-					-- "tailwindcss",
+
+					"ts_ls",
+					"astro",
+					"tailwindcss",
+
 					"taplo",
 					"yamlls",
 				},
@@ -31,6 +34,7 @@ return {
 					"prettier",
 					"prettierd",
 					"shellcheck",
+					"sql-formatter",
 					"stylua",
 					"yamllint",
 				},
