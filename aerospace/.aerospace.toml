@@ -1,12 +1,14 @@
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
+	'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0',
 ]
 
 # Notify Sketchybar about workspace change
-exec-on-workspace-change = ['/bin/bash', '-c',
-  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+exec-on-workspace-change = [
+	'/bin/bash',
+	'-c',
+	'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',
 ]
 
 # Start AeroSpace at login
@@ -31,75 +33,75 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 automatically-unhide-macos-hidden-apps = false
 
 [key-mapping]
-    preset = 'qwerty'
+preset = 'qwerty'
 
 [gaps]
-    inner.horizontal = 10
-    inner.vertical =   10
-    outer.left =       10
-    outer.bottom =     10
-    outer.top =        [{monitor.'Built-in Retina Display' = 10}, 50]
-    outer.right =      10
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = [{ monitor.'Built-in Retina Display' = 10 }, 50]
+outer.right = 10
 
 [mode.main.binding]
-    cmd-ctrl-alt-slash = 'layout tiles horizontal vertical'
-    cmd-ctrl-alt-comma = 'layout accordion horizontal vertical'
+cmd-ctrl-alt-slash = 'layout tiles horizontal vertical'
+cmd-ctrl-alt-comma = 'layout accordion horizontal vertical'
 
-    cmd-ctrl-alt-h = 'focus left'
-    cmd-ctrl-alt-j = 'focus down'
-    cmd-ctrl-alt-k = 'focus up'
-    cmd-ctrl-alt-l = 'focus right'
+cmd-ctrl-alt-h = 'focus left'
+cmd-ctrl-alt-j = 'focus down'
+cmd-ctrl-alt-k = 'focus up'
+cmd-ctrl-alt-l = 'focus right'
 
-    cmd-ctrl-alt-shift-h = 'move left'
-    cmd-ctrl-alt-shift-j = 'move down'
-    cmd-ctrl-alt-shift-k = 'move up'
-    cmd-ctrl-alt-shift-l = 'move right'
+cmd-ctrl-alt-shift-h = 'move left'
+cmd-ctrl-alt-shift-j = 'move down'
+cmd-ctrl-alt-shift-k = 'move up'
+cmd-ctrl-alt-shift-l = 'move right'
 
-    cmd-ctrl-alt-minus = 'resize smart -50'
-    cmd-ctrl-alt-equal = 'resize smart +50'
+cmd-ctrl-alt-minus = 'resize smart -50'
+cmd-ctrl-alt-equal = 'resize smart +50'
 
-    cmd-ctrl-alt-1 = 'workspace 1'
-    cmd-ctrl-alt-2 = 'workspace 2'
-    cmd-ctrl-alt-3 = 'workspace 3'
-    cmd-ctrl-alt-4 = 'workspace 4'
-    cmd-ctrl-alt-5 = 'workspace 5'
-    cmd-ctrl-alt-6 = 'workspace 6'
-    cmd-ctrl-alt-7 = 'workspace 7'
-    cmd-ctrl-alt-8 = 'workspace 8'
-    cmd-ctrl-alt-9 = 'workspace 9'
+cmd-ctrl-alt-1 = 'workspace 1'
+cmd-ctrl-alt-2 = 'workspace 2'
+cmd-ctrl-alt-3 = 'workspace 3'
+cmd-ctrl-alt-4 = 'workspace 4'
+cmd-ctrl-alt-5 = 'workspace 5'
+cmd-ctrl-alt-6 = 'workspace 6'
+cmd-ctrl-alt-7 = 'workspace 7'
+cmd-ctrl-alt-8 = 'workspace 8'
+cmd-ctrl-alt-9 = 'workspace 9'
 
-    cmd-ctrl-alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
-    cmd-ctrl-alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
-    cmd-ctrl-alt-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
-    cmd-ctrl-alt-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
-    cmd-ctrl-alt-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
-    cmd-ctrl-alt-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
-    cmd-ctrl-alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
-    cmd-ctrl-alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
-    cmd-ctrl-alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
+cmd-ctrl-alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
+cmd-ctrl-alt-shift-2 = ['move-node-to-workspace 2', 'workspace 2']
+cmd-ctrl-alt-shift-3 = ['move-node-to-workspace 3', 'workspace 3']
+cmd-ctrl-alt-shift-4 = ['move-node-to-workspace 4', 'workspace 4']
+cmd-ctrl-alt-shift-5 = ['move-node-to-workspace 5', 'workspace 5']
+cmd-ctrl-alt-shift-6 = ['move-node-to-workspace 6', 'workspace 6']
+cmd-ctrl-alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
+cmd-ctrl-alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
+cmd-ctrl-alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
 
-    cmd-ctrl-alt-tab = 'workspace-back-and-forth'
-    cmd-ctrl-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+cmd-ctrl-alt-tab = 'workspace-back-and-forth'
+cmd-ctrl-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-    cmd-ctrl-alt-shift-semicolon = 'mode service'
+cmd-ctrl-alt-shift-semicolon = 'mode service'
 
-		cmd-ctrl-alt-enter = 'exec-and-forget ~/.config/aerospace/scripts/new-ghostty-window.sh'
-    cmd-ctrl-alt-w = 'close'
-    cmd-ctrl-alt-space = 'exec-and-forget open -a Raycast'
-		cmd-ctrl-alt-shift-a = 'exec-and-forget open ~/Applications/Claude.app'
-		cmd-ctrl-alt-shift-b = 'exec-and-forget open -na "Zen Browser" --args --new-window'
+cmd-ctrl-alt-enter = 'exec-and-forget ~/.config/aerospace/scripts/new-ghostty-window.sh'
+cmd-ctrl-alt-w = 'close'
+cmd-ctrl-alt-space = 'exec-and-forget open -a Raycast'
+cmd-ctrl-alt-shift-a = 'exec-and-forget open ~/Applications/Claude.app'
+cmd-ctrl-alt-shift-b = 'exec-and-forget open -na "Zen Browser" --args --new-window'
 
 [mode.service.binding]
-    esc = ['reload-config', 'mode main']
-    r = ['flatten-workspace-tree', 'mode main']
-    f = ['layout floating tiling', 'mode main']
-    backspace = ['close-all-windows-but-current', 'mode main']
+esc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main']
+f = ['layout floating tiling', 'mode main']
+backspace = ['close-all-windows-but-current', 'mode main']
 
-    cmd-ctrl-alt-shift-h = ['join-with left', 'mode main']
-    cmd-ctrl-alt-shift-j = ['join-with down', 'mode main']
-    cmd-ctrl-alt-shift-k = ['join-with up', 'mode main']
-    cmd-ctrl-alt-shift-l = ['join-with right', 'mode main']
+cmd-ctrl-alt-shift-h = ['join-with left', 'mode main']
+cmd-ctrl-alt-shift-j = ['join-with down', 'mode main']
+cmd-ctrl-alt-shift-k = ['join-with up', 'mode main']
+cmd-ctrl-alt-shift-l = ['join-with right', 'mode main']
 
-    down = 'volume down'
-    up = 'volume up'
-    shift-down = ['volume set 0', 'mode main']
+down = 'volume down'
+up = 'volume up'
+shift-down = ['volume set 0', 'mode main']
