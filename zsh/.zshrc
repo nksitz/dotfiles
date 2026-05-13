@@ -22,3 +22,7 @@ alias nv='nvim'
 eval "$(starship init zsh)"
 fastfetch
 export PATH="$HOME/.local/bin:$PATH"
+
+if [[ "$(uname)" == "Darwin" ]]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
