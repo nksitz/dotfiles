@@ -1,0 +1,18 @@
+# font-family = "CaskaydiaCove Nerd Font Mono"
+
+
+shell-integration-features = ssh-terminfo
+shell-integration-features = ssh-env
+
+keybind = ctrl+alt+h=goto_split:left
+keybind = ctrl+alt+l=goto_split:right
+keybind = ctrl+alt+k=goto_split:up
+keybind = ctrl+alt+j=goto_split:down
+
+theme = TokyoNight
+background-opacity = 0.95
+macos-titlebar-style = hidden
+window-padding-x = 10
+window-padding-y = 10
+
+confirm-close-surface = false

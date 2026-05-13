@@ -51,12 +51,18 @@ return {
 		lazy = false,
 		build = ":TSUpdate",
 		config = function()
+			require("nvim-treesitter").setup({
+				ensure_installed = { "rust" },
+			})
 			vim.api.nvim_create_autocmd("FileType", {
 				callback = function()
 					pcall(vim.treesitter.start)
 					vim.wo[0][0].foldmethod = "expr"
 					vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
 					vim.o.foldlevel = 99
+
+					vim.api.nvim_set_hl(0, "@comment.documentation", { fg = "#9ece6a", italic = true })
+					vim.api.nvim_set_hl(0, "@lsp.typemod.comment.documentation.rust", { fg = "#9ece6a", italic = true })
 				end,
 			})
 		end,

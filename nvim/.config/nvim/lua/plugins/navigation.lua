@@ -79,7 +79,18 @@ return {
 	},
 	{
 		"folke/trouble.nvim",
-		opts = {}, -- for default options, refer to the configuration section for custom setup.
+		opts = {
+			config = function(opts)
+				local cols = vim.o.columns
+				if cols >= 200 then
+					opts.win.position = "right"
+					opts.win.size = { width = math.floor(cols / 3) }
+				else
+					opts.win.position = "bottom"
+					opts.win.size = { height = math.floor(vim.o.lines / 3) }
+				end
+			end,
+		},
 		cmd = "Trouble",
 		keys = {
 			{
