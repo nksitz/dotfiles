@@ -33,6 +33,7 @@ return {
 			sql = { "sql_formatter" },
 			json = { "prettierd", "prettier", stop_after_first = true },
 			yaml = { "prettierd", "prettier", stop_after_first = true },
+			toml = { "taplo" },
 			-- Conform can also run multiple formatters sequentially
 			-- python = { "isort", "black" },
 			--
